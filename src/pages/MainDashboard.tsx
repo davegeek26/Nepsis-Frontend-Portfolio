@@ -7,7 +7,7 @@ const MainDashboard: React.FC = () => {
     const [todayTokens, setTodayTokens] = useState(0);
     const [completedTasks, setCompletedTasks] = useState(0);
 
-    const handleTaskComplete = (taskId: string, tokensEarned: number) => {
+    const handleTaskComplete = (_taskId: string, tokensEarned: number) => {
         setTotalTokens(prev => prev + tokensEarned);
         setTodayTokens(prev => prev + tokensEarned);
         setCompletedTasks(prev => prev + 1);

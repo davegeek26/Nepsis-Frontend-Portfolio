@@ -91,11 +91,7 @@ const TaskCard: React.FC<TaskCardProps> = ({ task, onClick, onReset, onComplete 
         setIsStarted(false);
         setIsPaused(false);
         
-        // Only award points if minimum time requirement is met
-        const minutesElapsed = timeElapsed / 60; // Use decimal for sub-minute tasks
-        const finalPoints = minutesElapsed >= task.requiredMinutes ? points : 0;
-        
-        // Call onComplete with the final points
+        // Call onComplete
         onComplete(task.id);
     };
 
